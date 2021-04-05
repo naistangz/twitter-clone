@@ -1,6 +1,5 @@
 # Twitter Clone built using Django and VueJS :bird:
 
----
 ## Technologies 
 
 - [x] Django 
