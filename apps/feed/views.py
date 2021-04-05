@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from .models import Oink
 
@@ -20,3 +21,20 @@ def feed(request):
             oink.liked = False
 
     return render(request, 'feed/feed.html', {'oinks': oinks})
+
+
+@login_required
+def search(request):
+    query = request.GET.get('query', '')
+
+    if len(query) > 0:
+        oinkers = User.objects.filter(username__icontains=query)
+    else:
+        oinkers = []
+
+    context = {
+        'query': query,
+        'oinkers': oinkers,
+    }
+
+    return render(request, 'feed/search.html', context)
