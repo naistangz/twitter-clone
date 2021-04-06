@@ -29,7 +29,7 @@
             <hr>
             <div class="search-results">
                 {% for oinker in oinkers %}
-                <p>{{ oinker.username }}</p>
+                <p><a href="{% url 'oinkerprofile' oinker.username %}"></a>{{ oinker.username }}</p>
                 {% endfor %}
             </div>            
         </div>

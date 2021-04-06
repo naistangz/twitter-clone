@@ -21,7 +21,3 @@ def signup(request):
         form = UserCreationForm()
 
     return render(request, 'core/signup.html', {'form': form})
-
-
-def login():
-    pass
