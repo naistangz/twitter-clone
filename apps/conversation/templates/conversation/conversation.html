@@ -7,7 +7,7 @@
             <h1 class="title">Conversations</h1>
             <div class="messages">
                 {% for message in conversation.messages.all %}
-                    <div class="oink">
+                    <div class="oink pt-2">
                         <article class="media">
                             <figure class="media">
                                 <p class="image is-64x64">
@@ -16,7 +16,7 @@
                                     {% endif %}
                                 </p>
                             </figure>
-                            <div class="media-content">
+                            <div class="media-content pt-2 ml-2">
                                 <p>
                                   <strong>{{ message.created_by.username }}</strong>  
                                   <small>{{ message.created_at|naturaltime }}</small>
