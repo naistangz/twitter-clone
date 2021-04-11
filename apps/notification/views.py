@@ -19,5 +19,5 @@ def notifications(request):
         elif notification.notification_type == Notification.FOLLOWER:
             return redirect('oinkerprofile', username=notification.created_by.username)
         elif notification.notification_type == Notification.LIKE:
-            return redirect('oinkprofile', username=notification.to_user.username)
+            return redirect('oinkerprofile', username=notification.to_user.username)
     return render(request, 'notification/notifications.html')
