@@ -103,7 +103,7 @@
                 oinker: '{{ request.user.username }}',
                 created_at: 'Now',
                 avatar: '{% if request.user.oinkerprofile.avatar %}{{ request.user.oinkerprofile.avatar.url }}{% endif %}',
-                liked_oinks: [{% for oink in oinks %}{% if oink.liked %}{{ oink.id }},{% endif %}{% endfor %}]
+                liked_oinks: [{% for oink in oinks %}{% if oink.liked %}{{ oink.id }},{% endif %}{% endfor %}],
             }
         },
         methods: {

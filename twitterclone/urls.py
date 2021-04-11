@@ -30,7 +30,7 @@ urlpatterns = [
     #
     # API
     path('api/add_oink/', api_add_oink, name='api_add_oink'),
-    path('api/add_like/', api_add_like, name='api_add_link'),
+    path('api/add_like/', api_add_like, name='api_add_like'),
 
     # Admin
     path('admin/', admin.site.urls),
