@@ -10,7 +10,7 @@ from django.contrib.auth import views
 from django.urls import path
 
 from apps.conversation.views import conversations, conversation
-
+from apps.notification.views import notifications
 
 urlpatterns = [
     #
@@ -25,6 +25,7 @@ urlpatterns = [
     #
     path('feed/', feed, name='feed'),
     path('search/', search, name='search'),
+    path('notifications/', notifications, name='notifications'),
     path('edit_profile/', edit_profile, name='edit_profile'),
     path('conversations/', conversations, name='conversations'),
     path('conversation/<int:user_id>', conversation, name='conversation'),

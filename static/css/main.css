@@ -17,7 +17,9 @@ body {
     
 }
 
-.wrapper-oinks .oink {
+
+.wrapper-oinks .oink,
+.notifications-wrapper .media {
     margin-botttom:10px;
     padding:20px;
     border-radius:4px;

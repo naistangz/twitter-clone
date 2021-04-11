@@ -4,6 +4,8 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import Oink, Like
 
+from apps.notification.utils import create_notification
+
 
 @login_required
 def api_add_oink(request):
