@@ -1,4 +1,4 @@
-# Twitter Clone built using Django and VueJS :bird:
+# Twitter Clone built using Django and VueJS :bird:🐷
 
 ## Objectives
 
