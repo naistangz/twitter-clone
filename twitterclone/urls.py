@@ -1,3 +1,8 @@
+from apps.conversation.api import api_add_message
+from apps.oinkerprofile.views import oinkerprofile, follow_oinker, unfollow_oinker, followers, follows, edit_profile
+from apps.feed.api import api_add_oink, api_add_like
+from apps.feed.views import feed, search
+from apps.core.views import frontpage, signup, login
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -5,11 +10,7 @@ from django.contrib.auth import views
 from django.urls import path
 
 from apps.conversation.views import conversations, conversation
-from apps.core.views import frontpage, signup, login
 
-from apps.feed.views import feed, search
-from apps.feed.api import api_add_oink, api_add_like
-from apps.oinkerprofile.views import oinkerprofile, follow_oinker, unfollow_oinker, followers, follows, edit_profile
 
 urlpatterns = [
     #
@@ -36,6 +37,7 @@ urlpatterns = [
     # API
     path('api/add_oink/', api_add_oink, name='api_add_oink'),
     path('api/add_like/', api_add_like, name='api_add_like'),
+    path('api/add_message/', api_add_message, name='api_add_message'),
 
     # Admin
     path('admin/', admin.site.urls),

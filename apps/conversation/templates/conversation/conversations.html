@@ -10,7 +10,10 @@
                     <div class="conversations-list-item">
                         {% for user in conversation.users.all %}
                             {% if user != request.user %}
-                                <p>{{ user.username }} -  {{ conversation.modified_at|naturaltime }}</p>
+                                <a href="{% url 'conversation' user.id %}">
+                                    <p>{{ user.username }} -  {{ conversation.modified_at|naturaltime }}</p>
+                                </a>
+                                
                             {% endif %}
                         {% endfor %}
                     </div>

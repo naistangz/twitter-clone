@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Conversation, ConversationMessage
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 @login_required
