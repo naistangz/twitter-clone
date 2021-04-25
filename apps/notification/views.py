@@ -20,4 +20,6 @@ def notifications(request):
             return redirect('oinkerprofile', username=notification.created_by.username)
         elif notification.notification_type == Notification.LIKE:
             return redirect('oinkerprofile', username=notification.to_user.username)
+        elif notificaiton.notification_type == Notification.MENTION:
+            return redirect('oinkerprofile', username=notification.created_by.username)
     return render(request, 'notification/notifications.html')
